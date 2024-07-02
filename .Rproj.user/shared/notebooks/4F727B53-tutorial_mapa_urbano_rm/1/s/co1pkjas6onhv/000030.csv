@@ -1,0 +1,11 @@
+"0","mapa_zonas_urbanas |>
+  filter(nombre_comuna == ""Pudahuel"") |>
+  ggplot(aes(geometry = geometry)) +
+  geom_sf(fill = ""lightblue"", color = ""white"") +
+  geom_sf_text(aes(label = geocodigo), color = ""black"", size = 3)
+"
+"2","Warning in st_point_on_surface.sfc(sf::st_zm(x)) :"
+"2","
+ "
+"2"," st_point_on_surface may not give correct results for longitude/latitude data
+"

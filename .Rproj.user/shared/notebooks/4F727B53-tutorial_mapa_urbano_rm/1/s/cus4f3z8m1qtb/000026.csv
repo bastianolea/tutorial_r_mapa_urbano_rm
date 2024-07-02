@@ -1,0 +1,8 @@
+"0",""
+"0","# visualizar"
+"0","mapa_datos |> "
+"0","  ggplot() +"
+"0","  geom_sf(aes(geometry = geometry, "
+"0","              fill = variable), #usamos la variable que creamos como relleno de las comunas"
+"0","          col = ""white"") +"
+"0","  theme_void()"

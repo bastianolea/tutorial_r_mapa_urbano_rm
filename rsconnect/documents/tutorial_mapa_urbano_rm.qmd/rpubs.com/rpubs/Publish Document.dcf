@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/1196031/d7d37501922642febe483da05100cdd4
+bundleId: https://api.rpubs.com/api/v1/document/1196031/d7d37501922642febe483da05100cdd4
+url: http://rpubs.com/bastimapache/1196031
+version: 1

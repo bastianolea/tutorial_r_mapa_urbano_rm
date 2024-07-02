@@ -1,0 +1,16 @@
+"0","mapa_datos_2 |> 
+  ggplot() +
+  geom_sf(aes(geometry = geometry, 
+              fill = idh_2005_2),
+          col = ""white"") +
+  scale_fill_manual(breaks = c(""Medio"", ""Alto"", ""Muy alto""),
+                    values = c(""Medio"" = ""olivedrab4"", ""Alto"" = ""olivedrab3"", ""Muy alto"" = ""olivedrab2"")) +
+  geom_sf_text(aes(geometry = geometry, label = nombre_comuna), check_overlap = T, size = 2) +
+  theme_void() +
+  labs(fill = ""IDH"")
+"
+"2","Warning in st_point_on_surface.sfc(sf::st_zm(x)) :"
+"2","
+ "
+"2"," st_point_on_surface may not give correct results for longitude/latitude data
+"

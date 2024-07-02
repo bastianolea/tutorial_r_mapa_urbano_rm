@@ -1,0 +1,30 @@
+"0","# crear nuevo mapa
+mapa_urbano <- mapa_zonas_urbanas |> 
+  # filtrar solo comunas urbanas
+  filter(nombre_comuna %in% comunas_urbanas) |>
+  # filtrar islas urbanas
+  filter(!geocodigo %in% islas_urbanas) |>
+  # unir comunas
+  group_by(nombre_comuna, codigo_comuna) %>%
+  summarise(geometry = st_union(geometry)) |>
+  ungroup()
+"
+"1","[38;5;255m`summarise()` has grouped output by 'nombre_comuna'. You can override using the `.groups` argument.[39m
+"
+"0","# crear nuevo mapa"
+"0","mapa_urbano <- mapa_zonas_urbanas |> "
+"0","  # filtrar solo comunas urbanas"
+"0","  filter(nombre_comuna %in% comunas_urbanas) |>"
+"0","  # filtrar islas urbanas"
+"0","  filter(!geocodigo %in% islas_urbanas) |>"
+"0","  # unir comunas"
+"0","  group_by(nombre_comuna, codigo_comuna) %>%"
+"0","  summarise(geometry = st_union(geometry)) |>"
+"0","  ungroup()"
+"1","[38;5;255m`summarise()` has grouped output by 'nombre_comuna'. You can override using the `.groups` argument.[39m
+"
+"0","# graficar"
+"0","mapa_urbano |> "
+"0","  ggplot(aes(geometry = geometry)) +"
+"0","  geom_sf(fill = ""blueviolet"", color = ""white"") +"
+"0","  theme_void()"
